@@ -1,0 +1,18 @@
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	width: auto;
+	justify-content: center;
+	row-gap: var(--space-1);
+
+	& > * {
+		width: 33%;
+		text-align: center;
+	}
+}
+
+.content {
+	& > h2 {
+		width: fit-content;
+	}
+}

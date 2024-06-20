@@ -1,0 +1,10 @@
+.day {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & > h2 {
+        margin: var(--space-4) 0;
+        color: var(--secondary-2);
+    }
+}
