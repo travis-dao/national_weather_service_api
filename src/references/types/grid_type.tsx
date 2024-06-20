@@ -28,11 +28,6 @@ interface RelativeHumidity {
     value: number;
 }
 
-interface WindSpeed {
-    unitCode: string;
-    value: number;
-}
-
 export interface Period {
     number: number;
     name?: string;

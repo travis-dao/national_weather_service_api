@@ -38,11 +38,11 @@ const WeatherPerHour: FC<WeatherProps> = ({ period }) => {
         <div className={`${styles.panel} ${isPanelActive? styles.active : ''}`}>
             <div className={`${styles.wind} ${styles.icon_container}`}>
                 <i className={`wi wi-wind ${getWindDirIcon(period.windDirection)} ${styles.icon}`}></i>
-                <p>{period.windSpeed}</p>
+                <p>{period.windSpeed || 'N/A'}</p>
             </div>
             <div className={`${styles.humid} ${styles.icon_container}`}>
                 <Image alt='humid' src={'/weather_icons/wi-humidity.svg'} height={48} width={48} />
-                <p>{period.relativeHumidity.value}</p>
+                <p>{period.relativeHumidity?.value || 'N/A'}</p>
             </div>
         </div>
         </>

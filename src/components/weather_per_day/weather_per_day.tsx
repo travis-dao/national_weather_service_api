@@ -13,9 +13,9 @@ interface WeatherProps {
 const WeatherPerDay: FC<WeatherProps> = ({ props }) => {
     const date: String = moment(props[0].startTime.substring(0, 10), 'YYYY-MM-DD').format('dddd, MMMM D, YYYY');
 
-    const day = props.map((w: Period, index) => {
+    const day = props.map((period: Period, index) => {
         return (
-            <WeatherPerHour period={props[index]} key={index} />
+            <WeatherPerHour period={period} key={index} />
         )
     })
 

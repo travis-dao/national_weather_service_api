@@ -16,7 +16,7 @@ export default function Cities({ cities }: CitiesData) {
     return (
         <div className={styles.container}>
             {cities.map((city: City, index) => (
-                <Link href={`/city/${city.name}&latitude=${city.latitude}&longitude=${city.longitude}`} key={city.id}>
+                <Link href={`/city/${city.name}&latitude=${city.latitude}&longitude=${city.longitude}`} key={index}>
                     {city.name}
                 </Link>
             ))}

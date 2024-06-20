@@ -13,7 +13,7 @@ interface props {
 }
 
 const Display: FC<props> = ({ params }) => {
-	const paramsFiltered = params.url.replaceAll('%26', '').replaceAll('%20', '').replaceAll('%3D', '');
+	const paramsFiltered = params.url.replaceAll('%26', '').replaceAll('%20', ' ').replaceAll('%3D', '');
 	const name = paramsFiltered.substring(0, paramsFiltered.indexOf('latitude'));
 	const lat = paramsFiltered.substring(paramsFiltered.indexOf('latitude') + 'latitude'.length, paramsFiltered.indexOf('longitude'));
 	const long = paramsFiltered.substring(paramsFiltered.indexOf('longitude') + 'longitude'.length, paramsFiltered.length);
